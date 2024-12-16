@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "echo 'Building backend...' && npm install",
+    "build": "echo 'Building backend...' && npm install ",
     "start": "cross-env NODE_PATH=./url-shortener-api node --watch ./index.js"
   },
   "author": "",
