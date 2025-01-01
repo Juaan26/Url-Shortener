@@ -38,7 +38,7 @@ export default function App() {
         }
 
         try {
-            const response = await axios.post('http://localhost:3000/links/crear',
+            const response = await axios.post('http://localhost:3000/api/links/crear',
                 { input_url: inputUrl },
                 { headers: { 'Content-Type': 'application/json' } }
             );
