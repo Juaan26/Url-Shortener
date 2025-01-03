@@ -25,12 +25,6 @@ export default function App() {
         event.preventDefault();
         setError('');
 
-        console.log(inputUrl)
-        console.log(isValidUrl('https://example.com')); // true
-        console.log(isValidUrl('http://example.com')); // true 
-        console.log(isValidUrl('example.com')); // true
-        console.log(isValidUrl('sdafsdf')); // false
-
         if (!isValidUrl(inputUrl)) {
             setError(' La URL no es valida o no está estructurada correctamente');
             console.log("no es valida")
