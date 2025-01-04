@@ -63,7 +63,7 @@ export default function App() {
                             onChange={ (e) => setInputUrl(e.target.value) }
                         />
                         <button type="submit" className='btn-submit'>
-                            <img className="url-svg" src="/rockets2.svg" alt="" />
+                            <img className="url-svg" src="url-s/public/rockets2.svg" alt="imagen de un cohete para enviar el enlace" />
                         </button>
                     </form>
                     { error && <p className='text-error'>{ error }</p> }
