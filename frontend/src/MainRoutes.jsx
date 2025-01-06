@@ -7,9 +7,9 @@ export default function MainRoutes() {
     return (
         <Router future={ { v7_startTransition: true, v7_relativeSplatPath: true } } >
             <Routes>
-                <Route path="/url-s" element={ <App /> } />
-                <Route path="/url-s/shortened-url/:url" element={ <ShortenedUrlPage /> } />
-                <Route path="/url-s/:url" element={ <RedirectToUrl /> } />
+                <Route path="/" element={ <App /> } />
+                <Route path="/shortened-url/:url" element={ <ShortenedUrlPage /> } />
+                <Route path="/:url" element={ <RedirectToUrl /> } />
             </Routes>
         </Router>
     );

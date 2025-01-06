@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'insaniburger';
-    src: URL('url-s/public/Insanibu.ttf') format('truetype');
+    src: URL('/Insanibu.ttf') format('truetype');
 }
 
 :root {

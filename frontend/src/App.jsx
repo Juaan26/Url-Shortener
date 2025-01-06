@@ -26,13 +26,13 @@ export default function App() {
         setError('');
 
         if (!isValidUrl(inputUrl)) {
-            setError(' La URL no es valida o no está estructurada correctamente');
-            console.log("no es valida")
+            setError('La URL no es valida o no está estructurada correctamente');
+            console.log("no es valida");
             return;
         }
 
         try {
-            const response = await axios.post('api/links/crear',
+            const response = await axios.post('/api/links/crear',
                 { input_url: inputUrl },
                 { headers: { 'Content-Type': 'application/json' } }
             );
@@ -43,7 +43,8 @@ export default function App() {
                 navigate(`/shortened-url/${code}`);
             }
         } catch (error) {
-            console.error('Error al acortar la URL:', error);
+            setError('Error al crear la URL acortada');
+            console.error('Error al crear la URL acortada:', error);
         }
     };
 
@@ -63,7 +64,7 @@ export default function App() {
                             onChange={ (e) => setInputUrl(e.target.value) }
                         />
                         <button type="submit" className='btn-submit'>
-                            <img className="url-svg" src="url-s/public/rockets2.svg" alt="imagen de un cohete para enviar el enlace" />
+                            <img className="url-svg" src="public/rockets2.svg" alt="imagen de un cohete para enviar el enlace" />
                         </button>
                     </form>
                     { error && <p className='text-error'>{ error }</p> }
@@ -73,7 +74,3 @@ export default function App() {
         </div>
     );
 }
-
-
-
-

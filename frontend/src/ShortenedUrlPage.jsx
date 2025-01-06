@@ -3,7 +3,7 @@ import './ShortenedUrlPage.css';
 
 export function ShortenedUrlPage() {
     const { url } = useParams();
-    const fullUrl = `http://wandev.top/url-s/${url}`;
+    const fullUrl = `http://url.wandev.top/${url}`;
 
     const handleCopy = () => {
         navigator.clipboard.writeText(fullUrl).then(() => {
