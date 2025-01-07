@@ -7,8 +7,14 @@ import cors from 'cors';
 const app = express();
 const PORT = 3001;
 
+// Configurar CORS para permitir solicitudes desde http://url.wandev.top
+app.use(cors({
+    origin: 'http://url.wandev.top',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(bodyParser.json());
-app.use(cors()); // Mueve cors arriba del route
 
 // Rutas del backend
 app.use('/api', urlRoutes);

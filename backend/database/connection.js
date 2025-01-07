@@ -1,8 +1,8 @@
 import { Sequelize } from 'sequelize';
 
-const db = new Sequelize('url_shortener', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql',
+const db = new Sequelize('url_shortener', 'admin', '1234', {
+    host: '127.0.0.1',
+    dialect: 'mariadb',
     // logging: false,
 });
 
