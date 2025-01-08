@@ -32,7 +32,7 @@ export default function App() {
         }
 
         try {
-            const response = await axios.post('http://localhost:3001/api/links/crear',
+            const response = await axios.post('http://apiu.wandev.top/api/links/crear',
                 { input_url: inputUrl },
                 { headers: { 'Content-Type': 'application/json' } }
             );
