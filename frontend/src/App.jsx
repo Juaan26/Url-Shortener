@@ -12,12 +12,14 @@ export default function App() {
     const navigate = useNavigate();
 
     const isValidUrl = (url) => {
-        const pattern = new RegExp('^(https?:\\/\\/)?' + // protocolo 
+        const pattern = new RegExp(
+            '^(https?:\\/\\/)?' + // protocolo
             '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|' + // dominio
-            '((\\d{1,3}\\.){3}\\d{1,3}))' + // o dirección IP (v4) 
-            '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // puerto y ruta 
-            '(\\?[;&a-z\\d%_.~+=-]*)?' + // cadena de consulta 
-            '(\\#[-a-z\\d_]*)?$', 'i'); // fragmento
+            '((\\d{1,3}\\.){3}\\d{1,3}))' + // o dirección IP (v4)
+            '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // puerto y ruta
+            '(\\?[;&a-z\\d%_.~+=-]*)?' + // cadena de consulta
+            '(\\#[-a-z\\d_]*)?$', 'i' // fragmento
+        );
         return !!pattern.test(url);
     };
 
