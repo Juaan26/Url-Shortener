@@ -8,6 +8,9 @@ export function ShortenedUrlPage() {
     const handleCopy = () => {
         navigator.clipboard.writeText(fullUrl).then(() => {
             alert('URL copiada al portapapeles');
+        }).catch(err => {
+            console.error('Error al copiar la URL: ', err);
+            alert('No se pudo copiar la URL por un error inesperado. Por favor, inténtalo de nuevo.');
         });
     };
 

@@ -57,6 +57,24 @@
 
 }
 
+@media (max-width: 1470px) {
+    .Shortened-tx {
+        font-size: x-large;
+    }
+
+    .Shortened-btn {
+        margin-left: 5px;
+    }
+
+}
+
+@media (max-width: 1049px) {
+    .Shortened-tx {
+        font-size: medium
+    }
+
+}
+
 @media (max-width: 768px) {
     .Shortened-div {
         margin-top: 6rem;
