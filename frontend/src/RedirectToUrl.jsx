@@ -9,7 +9,7 @@ export default function RedirectToUrl() {
     useEffect(() => {
         const redirect = async () => {
             try {
-                const response = await axios.post('http://apiu.wandev.top/api/links/redirect', { shortenedUrl: url }, { headers: { 'Content-Type': 'application/json' } });
+                const response = await axios.post('https://apiu.wandev.top/api/links/redirect', { shortenedUrl: url }, { headers: { 'Content-Type': 'application/json' } });
                 const result = response.data;
                 console.log('Respuesta del backend:', result); // Verifica la respuesta del backend
                 if (result.input_url) {
